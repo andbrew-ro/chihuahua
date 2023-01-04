@@ -47,7 +47,7 @@ export const Projects = () => {
   ];
 
   return (
-    <div className="hero min-h-screen">
+    <div className="hero min-h-screen bg-black text-white">
       <div className="flex-col">
         <h2 className="text-5xl pt-16 pb-8">Projects</h2>
         {grid(projects).map((row, i) => {
@@ -56,7 +56,7 @@ export const Projects = () => {
               {row.map((project) => {
                 return (
                   <a key={project.title} href={project.url}>
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card w-96 bg-white shadow-xl text-black">
                       <figure>
                         <img src={project.image.path} alt={project.image.alt} />
                       </figure>
@@ -64,7 +64,7 @@ export const Projects = () => {
                         <h2 className="card-title">
                           {project.title}
                           {project.new && (
-                            <div className="badge badge-secondary">NEW</div>
+                            <div className="badge badge-primary">NEW</div>
                           )}
                         </h2>
                         <p>{project.description}</p>
